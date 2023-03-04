@@ -1,0 +1,31 @@
+syntax="proto3";
+
+
+service IDcardOcr {
+    rpc extractText (OcrRequest) returns (OcrData) {}
+}
+
+message OcrRequest {
+    string front_img = 1;
+    string back_img = 2;
+}
+
+message OcrData {
+    string type = 1;
+    FrontData front =2;
+    BackData back =3;
+}
+message Meta {
+    int32 code = 1;
+    string message = 2;
+}
+message OcrResponse {
+    Meta meta = 1;
+    OcrData data = 2;
+}
+message FrontData {
+    string cmt_number = 1;
+}
+message BackData {
+    string cmt_identification = 1;
+}
