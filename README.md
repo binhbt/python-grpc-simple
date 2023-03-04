@@ -6,5 +6,5 @@ python3 -m grpc_tools.protoc --proto_path=. ./greeting.proto --python_out=. --gr
 
 # Server up. 
 python /build/grpc/grpc_client_test.py   
-# test Client.  
+# Test Client.  
 python /build/grpc/grpc_client_test.py    
