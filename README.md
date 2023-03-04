@@ -5,6 +5,6 @@ pip install grpcio-tools==1.33.2.
 python3 -m grpc_tools.protoc --proto_path=. ./protos/greeting.proto --python_out=. --grpc_python_out=.   
 
 # Server up. 
-python /build/grpc/grpc_client_test.py   
+python grpc_client_test.py   
 # Test Client.  
-python /build/grpc/grpc_client_test.py    
+python grpc_client_test.py    
